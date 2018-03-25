@@ -5,90 +5,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/CSS/index.css">
     <title>Lucky You</title>
 </head>
 
 <body>
     <header>
-        <img src="/Images/header_image.jpg" alt="header_image" width="1350" height="400"></img>
+        <img src="/Images/header_image.jpg" alt="header image" width="1350" height="400">
         <h1>Lucky You</h1>
-        <br> бюро знахідок
+        <em>бюро знахідок</em>
     </header>
     <hr>
     <nav>
-
+        <button name="Знайдено">Знайдено</button>
+        <button name="Загублено">Загублено</button>
+        <button name="Аукціон">Аукціон</button>
+        <button name="Контакти">Контакти</button>
+        <button name="Реєстрація">Реєстрація</button>
+        <button name="Увійти">Увійти</button>
+        <form>
+            <p><input type="search" name="find" placeholder="Пошук..."> 
+            <input type="submit" value="Знайти"></p>
+        </form>
     </nav>
     <hr>
     <nav>
         <h3>Найпоширеніші категорії</h3>
+        <ul>
+            <li>Мобільні телефони</li>
+            <li>Галантерея</li>
+            <li>Банківські картки/гроші</li>
+            <li>Аксесуари</li>
+            <li>Документи</li>
+            <li>Флешки/карти пам'яті</li>
+            <li>Ключі</li>
+            <li>Інше</li>
+        </ul>
     </nav>
     <hr>
     <main>
         <section>
-            <h3>Останні знайдені</h3>
+            <h2>Останні знайдені</h2>
             <article>
-
+                <h4>Знайдено шапку</h4>
+                <img src="/Images/Found/found_clothes.JPG" alt="found clothes" width="300" height="300">
             </article>
             <article>
-
+                <h4>Знайдено ключі</h4>
+                <img src="/Images/Found/found_key.JPG" alt="found key" width="300" height="300">
             </article>
             <article>
-
+                <h4>Знайдено парасольку</h4>
+                <img src="/Images/Found/found_umbrella.JPG" alt="found umbrella" width="300" height="300">
             </article>
             <article>
-
+                <h4>Знайдено годинник</h4>
+                <img src="/Images/Found/found_watch.JPG" alt="found watch" width="300" height="300">
             </article>
         </section>
         <section>
-            <h3>Останні загублені</h3>
+            <h2>Останні загублені</h2>
             <article>
-
+                <h4>Загублено документи</h4>
+                <img src="/Images/Lost/lost_documents.JPG" alt="lost documents" width="300" height="300">
             </article>
             <article>
-
+                <h4>Загублено паспорт</h4>
+                <img src="/Images/Lost/lost_passport.JPG" alt="lost passport" width="300" height="300">
             </article>
             <article>
-
+                <h4>Загублено телефон</h4>
+                <img src="/Images/Lost/lost_phone.JPG" alt="lost phone" width="300" height="300">
             </article>
             <article>
-
+                <h4>Загублено гаманець</h4>
+                <img src="/Images/Lost/lost_wallet.JPG" alt="lost wallet" width="300" height="300">
             </article>
         </section>
     </main>
     <section>
         <h3>Карта знахідок і втрат</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d59933.24171634329!2d24.024777930039402!3d49.83688107452646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1521965162540" width="800" height="600" allowfullscreen></iframe>
     </section>
     <section>
         <h3>Подати оголошення</h3>
         <form method="POST" action="https://formspree.io/mikhail.romanishin@gmail.com">
             <label for="client-name-surmane">Прізвище Ім'я:</label>
-            <input type="text" name="Прізвище Ім'я" placeholder="Прізвище Ім'я" id="client-name-surmane" required>
+            <input type="text" name="Name Surname" placeholder="Прізвище Ім'я" id="client-name-surmane" required>
             <br>
             <label>Email:
-            <input type="email" name="client-email" placeholder="Email" required>
-        </label>
+                <input type="email" name="Client Email" placeholder="Email" required>
+            </label>
             <br>
             <label for="tel">Номер телефону:</label>
-            <input type="tel" id="tel" name="телефон" placeholder="+380xxxxxxxxx">
+            <input type="tel" id="tel" name="Phone Number" placeholder="+380xxxxxxxxx">
             <br>
             <label for="city">Місто:</label>
-            <select id="city" name="Місто">
-            <option>Львів</option>
-            <option>Тернопіль</option>
-            <option>Київ</option>
-        </select>
-
+            <select id="city" name="City">
+                <option>Львів</option>
+                <option>Тернопіль</option>
+                <option>Одеса</option>
+                <option>Луцьк</option>
+                <option>Запоріжжя</option>
+                <option>Дніпро</option>
+                <option>Полтава</option>
+                <option>Вінниця</option>
+            </select>
+            <br>
+            <label for="topic">Рубрика:</label>
+            <select id="topic" name="Topic">
+                <option>Загублено</option>
+                <option>Знайдено</option>
+            </select>
+            <br>
+            <label for="name">Назва:</label>
+            <input type="text" name="Name" placeholder="Назва" id="name" required>
+            <br>
+            <label for="describing">Опис:</label>
+            <br>
+            <textarea name="Description" placeholder="Текст оголошення" id="describing" rows="5" cols="50"></textarea>
+            <br>
+            <input type="file" id="file" name="file" accept=".png, .jpg, .jpeg" multiple>
+            <p><button type="submit" value="Надіслати"><img src="/Images/Form/done.jpg" alt="submit" width="50" height="50"></button> <button type="reset" value="Скинути"><img src="/Images/Form/reset.jpg" alt="reset" width="50" height="50"></button></p>
         </form>
     </section>
     <hr>
     <footer>
         <section>
             <h4>Долучайтеся до знахідок</h4>
+            <form method="get" action="https://www.facebook.com/" target="_blank" title="Facebook">
+                <button type="submit" name="facebook"><img src="/Images/Footer/facebook_icon.png" alt="facebook" width="40" height="40"></button>
+            </form>
+            <br>
+            <form method="get" action="https://www.instagram.com/" target="_blank" title="Instagram">
+                <button type="submit" name="instagram"><img src="/Images/Footer/instagram_icon.png" alt="instagram" width="40" height="40"></button>
+            </form>
         </section>
+        <br>
         <section>
             <h4>Завантажте наш додаток</h4>
+            <br>
+            <form method="get" action="https://www.appstore.com/" target="_blank" title="AppSrore">
+                <button type="submit" name="appstore"><img src="/Images/Footer/ios_download.png" alt="ios" width="200" height="60"></button>
+            </form>
+            <br>
+            <form method="get" action="https://play.google.com/store" target="_blank" title="Play Market">
+                <button type="submit" name="play_market"><img src="/Images/Footer/android_download.png" alt="android" width="200" height="60"></button>
+            </form>
         </section>
     </footer>
 </body>
-
 </html>

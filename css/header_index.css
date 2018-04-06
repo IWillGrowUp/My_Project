@@ -1,5 +1,5 @@
 header {
-    background-image: url(images/header/header_image.jpg);
+    background-image: url(../images/header/header_image.jpg);
     background-position: center center;
     background-size: cover;
     height: 370px;
@@ -26,7 +26,7 @@ header em {
 
 @media (max-width: 768px) {
     header {
-        background-image: url(images/header/header_image.jpg);
+        background-image: url(../images/header/header_image.jpg);
         background-position: center;
         background-size:contain;
         text-align: left;
@@ -55,7 +55,7 @@ header em {
 
 @media (max-width: 414px) {
     header {
-        background-image: url(images/header/header_image.jpg);
+        background-image: url(../images/header/header_image.jpg);
         background-position: center;
         background-size:contain;
         text-align: left;

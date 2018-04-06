@@ -1,0 +1,27 @@
+#contacts {
+    text-align: left;
+    font-size: 1.3rem;
+    color: #0c1d2f;
+    line-height: 1rem;
+    display: grid;
+    grid-template-columns: 5rem 5rem ;
+    grid-template-rows: 1fr 1fr ;
+}
+
+#contacts h4 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: left;
+}
+
+#fb {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    text-align: left;
+}
+
+#inst {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    text-align: left;
+}

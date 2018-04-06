@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Pattaya');
+
+html {
+    font-family: 'Pattaya', sans-serif;
+    color: white;
+    max-width: 1100px;
+    margin: auto;
+    line-height: 1.6em;
+    background-color: #b8dad6;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: repeat(7, 15%);
+}
+
+header {
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+#main_menu {
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+#popular_category {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+#reg_form {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+#last {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+main {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+#map {
+    grid-column: 1/3;
+    grid-row: 5/6;
+}
+
+#post_form {
+    grid-column: 1/3;
+    grid-row: 6/7;
+}
+
+footer {
+    grid-column: 1/3;
+    grid-row: 7/8;
+}
+
+@media (max-width: 414px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:  10rem 5rem 17rem 22rem 36rem 100rem 23rem 65rem 30rem;
+    }
+
+    header {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    #main_menu {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    #popular_category {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    #reg_form {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    #last {
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+
+    main {
+        grid-column: 1/2;
+        grid-row: 6/7;
+    }
+
+    #map {
+        grid-column: 1/2;
+        grid-row: 7/8;
+    }
+
+    #post_form {
+        grid-column: 1/2;
+        grid-row: 8/9;
+    }
+
+    footer {
+        grid-column: 1/2;
+        grid-row: 9/10;
+    }
+}

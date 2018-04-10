@@ -1,0 +1,13 @@
+#post_form {
+    border-style: double;
+    border-color: #0c1d2f #0c1d2f #0c1d2f #0c1d2f;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: #0c1d2f;
+    line-height: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4rem 1fr;
+}
+

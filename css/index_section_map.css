@@ -1,8 +1,8 @@
 #map {
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.rem;
     color: #0c1d2f;
-    line-height: 1rem;
+    margin: 1rem;
 }
 
 #google_map {
@@ -20,7 +20,7 @@
     position:absolute;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 530px) {
     #map {
         text-align: center;
         font-size: 1.3rem;

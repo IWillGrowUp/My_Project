@@ -1,0 +1,329 @@
+<form id="the_last_form" method="POST" action="https://formspree.io/mikhail.romanishin@gmail.com">
+            <div id="field_name_sur">
+                <label for="client_name_surmane"><span  class="label_form">Прізвище Ім'я:</span></label>
+                <input class="field" type="text" name="name surname" placeholder="Прізвище Ім'я" id="client_name_surmane" required>
+            </div>
+            <div id="field_mail">
+                <label>Email:
+                <input class="field" type="email" name="client email" placeholder="Email" required>
+            </label>
+            </div>
+            <div id="field_phone">
+                <label for="tel">Номер телефону:</label>
+                <input class="field" type="tel" id="tel" name="phone number" placeholder="+380xxxxxxxxx">
+            </div>
+            <div id="field_city">
+                <label for="city">Місто:</label>
+                <select class="field" id="city" name="city">
+                    <option>Львів</option>
+                    <option>Тернопіль</option>
+                    <option>Одеса</option>
+                    <option>Луцьк</option>
+                    <option>Запоріжжя</option>
+                    <option>Дніпро</option>
+                    <option>Полтава</option>
+                    <option>Вінниця</option>
+                </select>
+            </div>
+            <div id="field_topic">
+                <label for="topic">Рубрика:</label>
+                <select class="field" id="topic" name="topic">
+                    <option>Загублено</option>
+                    <option>Знайдено</option>
+                </select>
+            </div>
+            <div id="field_name">
+                <label for="name">Назва:</label>
+                <input class="field" type="text" name="name" placeholder="Назва" id="name" required>
+            </div>
+            <div id="field_descr">
+                <label id="label_descr" for="describing">Опис:</label>
+                <textarea class="field_textarea" name="description" placeholder="Текст оголошення" id="describing"></textarea>
+                <input id="download_file" type="file" name="file" accept=".png, .jpg, .jpeg" title="Вибрати файли" multiple>
+                <p id="submit_reset"><button type="submit" value="надіслати"><img src="images/form/done.jpg" alt="надіслати" width="50" height="50"></button> <button type="reset" value="скинути"><img src="images/form/reset.jpg" alt="скинути" width="50" height="50"></button></p>
+            </div>
+        </form>
+        
+        
+        
+.field {
+    width: 60%;
+    padding: 8px 0px;
+    font-size: 1.5rem;
+    font-family: cursive;
+    margin: 0rem 1rem 1rem 0rem;
+}
+
+.field_textarea {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-size: 1.5rem;
+    font-family: cursive;
+    padding: 8px 8px;
+    margin: 0rem 1.5rem 1rem 0.5rem;
+}
+
+#the_last_form {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 22rem;
+}
+
+
+#field_name_sur {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+#field_mail {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#field_phone {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+#field_city {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+#field_descr {
+    grid-column: 1/3;
+    grid-row: 4/5;
+    display: grid;
+    grid-template-columns: 17% 84%;
+    grid-template-rows: 60% 15% 25%;
+    text-align: right;
+}
+
+#label_descr {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: right;
+    padding: 2rem 0.3rem;
+}
+
+#download_file {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    text-align: left;
+    margin-left: 11.9rem
+}
+
+#submit_reset {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    text-align: right;
+    margin: 0.5rem 1.5rem;
+}
+
+@media (max-width: 1000px) {
+    #post_form {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 940px) {
+    #post_form {
+        font-size: 1.3rem;
+    }
+
+    .field {
+        width: 50%;
+        padding: 8px 0px;
+        font-size: 1.3rem;
+        font-family: cursive;
+        margin: 0rem 1rem 1rem 0rem;
+    }
+
+    .field_textarea {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        font-size: 1.5rem;
+        font-family: cursive;
+        padding: 8px 8px;
+        margin: 0rem 1.5rem 1rem 3.1rem;
+
+    }
+}
+
+@media (max-width: 820px) {
+    #post_form {
+        font-size: 1.2rem;
+    }
+
+    .field {
+        width: 50%;
+        padding: 8px 0px;
+        font-size: 1.3rem;
+        font-family: cursive;
+        margin: 0rem 1rem 1rem 0rem;
+    }
+
+    .field_textarea {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        font-size: 1.5rem;
+        font-family: cursive;
+        padding: 8px 8px;
+        margin: 0rem 1.5rem 1rem 2.5rem;
+        
+    }
+}
+
+@media (max-width: 728px) {
+    #post_form {
+        font-size: 1.1rem;
+    }
+
+    .field {
+        width: 50%;
+        padding: 8px 0px;
+        font-size: 1rem;
+        font-family: cursive;
+        margin: 0rem 1rem 1rem 0rem;
+        text-align: center;
+    }
+
+    .field_textarea {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        font-size: 1.5rem;
+        font-family: cursive;
+        padding: 8px 8px;
+        margin: 0rem 1.5rem 1rem 2.5rem;        
+    }
+}
+
+@media (max-width: 644px) {
+    #post_form {
+        font-size: 1rem;
+    }
+
+    .field {
+        width: 45%;
+        padding: 8px 0px;
+        font-size: 1rem;
+        font-family: cursive;
+        margin: 0rem 1rem 1rem 0rem;
+        text-align: center;
+    }
+
+    .field_textarea {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        font-size: 1.3rem;
+        font-family: cursive;
+        padding: 8px 8px;
+        margin: 0rem 1.5rem 1rem 1.8rem;        
+    }
+}
+
+@media (max-width: 572px) {
+    #post_form {
+        margin: 0rem 1rem 0rem 0rem;
+        padding: 0.9rem;
+        text-align: left;
+        font-size: 1.3rem;
+        line-height: 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5rem 1fr;
+    }
+    
+    #the_last_form {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 6rem 6rem 6rem 6rem 6rem 6rem 15rem;
+    }
+
+    .field {
+        width: 26rem;
+        padding: 8px 8px;
+        font-size: 1.5rem;
+        font-family: cursive;
+        margin: 0rem 1rem 1rem 0rem;
+    }
+
+    #field_name_sur {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    
+    #name {
+        width: 26rem;
+    }
+
+    #field_mail {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    #field_phone {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    #field_city {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    #city {
+        width: 27.1rem;
+    }
+
+     #topic {
+        width: 27.1rem;
+    }
+
+    #field_topic {
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+
+    #field_name {
+        grid-column: 1/2;
+        grid-row: 6/7;
+    }
+
+    #field_descr {
+        grid-column: 1/2;
+        grid-row: 7/8;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5rem 8rem 4rem 0rem;
+        text-align: right;
+    }
+
+    #label_descr {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        text-align: center;
+        margin-left: 0rem;
+    }
+
+    #describing {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        margin-left: 0rem;
+    }
+
+    #download_file {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        margin-left: 0rem;
+    }
+
+    #submit_reset {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+}

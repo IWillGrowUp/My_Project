@@ -1,6 +1,6 @@
 #map {
     text-align: center;
-    font-size: 1.rem;
+    font-size: 1rem;
     color: #0c1d2f;
     margin: 1rem;
 }
@@ -22,10 +22,6 @@
 
 @media (max-width: 530px) {
     #map {
-        text-align: center;
-        font-size: 1.3rem;
-        color: #0c1d2f;
-        line-height: 1rem;
         width: 30.3rem;
     }
 }

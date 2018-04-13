@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/registration.css">
+    <title>Реєстрація</title>
+</head>
+
+<body>
+    <h1>Реєстрація нового користувача</h1>
+    <form class="needs-validation" novalidate method="POST" action="https://formspree.io/mikhail.romanishin@gmail.com">
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom01">Ім'я</label>
+                <input type="text" class="form-control" id="validationCustom01" name="name" placeholder="Ваше ім'я" required>
+                <div class="valid-feedback">
+                    Добре!
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom02">Прізвище</label>
+                <input type="text" class="form-control" id="validationCustom02" name="surname" placeholder="Ваше прізвище" required>
+                <div class="valid-feedback">
+                    Добре!
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationCustomUsername">Нікнейм</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    </div>
+                    <input type="text" class="form-control" id="validationCustomUsername" name="nickname" placeholder="Ваш нікнейм" aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                        Будь ласка оберіть нікнейм.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom03">Місто</label>
+                <input type="text" class="form-control" id="validationCustom03" name="city" placeholder="Ваше місто" required>
+                <div class="invalid-feedback">
+                    Будь ласка вкажіть Ваше місто.
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationCustom04">Номер Телефону</label>
+                <input type="text" class="form-control" id="validationCustom04" name="phonenumber" placeholder="+380 xx xxx xx xx" required>
+                <div class="invalid-feedback">
+                    Будь ласка вкажіть номер телефону.
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationCustom05">Вік</label>
+                <input type="text" class="form-control" id="validationCustom05" name="age" placeholder="Ваш вік" required>
+                <div class="invalid-feedback">
+                    Будь ласка введіть Ваш вік.
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" name="agreement" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+        * Я погоджуюсь із передачею та обробкою моїх даних адміністрацією сайту Lucky You. Я підтверджую своє повноліття та відповідальність за розміщення оголошення.
+      </label>
+                <div class="invalid-feedback">
+                    Ви не погодилися з правилами сайту.
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Зареєструватись</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/registration.js"></script>
+</body>
+
+</html>

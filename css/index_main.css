@@ -1,6 +1,6 @@
 main {
     color: #0c1d2f;
-    background-color: #29776e;
+    background-color: #03bd99;
     margin: 0.5rem;
 }
 
@@ -71,6 +71,7 @@ main {
     border-style:outset;
     padding-bottom: 2rem;
     margin: 1rem;
+    background-color: wheat;
 }
 
 main h4 {
@@ -111,7 +112,7 @@ main h4 {
 
 @media (max-width: 530px) {
     .image_main {
-        width: 13rem;
+        width: 20rem;
     }
 
     .button_main {
@@ -126,3 +127,36 @@ main h4 {
         margin-top: 4rem;
     }
 }
+
+@media (max-width: 414px) {
+    .image_main {
+        width: 70%;
+    }
+
+    .button_main {
+        height: 90%;
+    }
+
+    main {
+        width: 80%;
+    }
+
+    .main_lost h4 {
+        font-size: 0.8rem;
+    }
+
+    .main_found h4 {
+        font-size: 0.8rem;
+    }
+
+    .carousel-control-prev {
+        width: 4%;
+        margin-top: 4.4rem;
+    }
+
+    .carousel-control-next {
+        width: 4%;
+        margin-top: 4.4rem;
+    }
+}
+

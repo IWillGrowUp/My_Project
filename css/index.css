@@ -3,8 +3,9 @@
 body {
     font-family: 'Pattaya', sans-serif;
     max-width: 1100px;
+    min-width: 450px;
     margin: auto;
-    background-color: #b8dad6;
+    background-color: #f5deb3;
     font-size: 1.3rem;
     line-height: 1rem;
 }
@@ -110,5 +111,11 @@ footer {
     footer {
         grid-column: 1/2;
         grid-row: 9/10;
+    }
+}
+
+@media (max-width: 414px) {
+     body {
+        grid-template-rows:  8rem 4rem 19rem 32rem 51rem 62rem 18rem 60rem 30rem;
     }
 }

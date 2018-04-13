@@ -1,7 +1,7 @@
 #post_form {
     border-style: double;
     border-color: #0c1d2f #0c1d2f #0c1d2f #0c1d2f;
-    margin: 1rem;
+    margin: 0.5rem;
     padding: 1rem;
     font-size: 1.1rem;
     color: #0c1d2f;
@@ -9,5 +9,11 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 4rem 1fr;
+    background-color: #03bd99;
 }
 
+@media (max-width: 414px) {
+    #post_form {
+        width: 80%;
+    }
+}

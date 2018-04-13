@@ -2,12 +2,13 @@
     display: grid;
     grid-template-columns: 1fr ;
     grid-template-rows: 60px 1fr ;
-    margin: 1rem 0.5rem 0.5rem 1.7rem;
+    margin: 1rem 0.5rem 0.5rem 0.5rem;
     border-style: double;
     border-color: #0c1d2f #0c1d2f #0c1d2f #0c1d2f;
     font-size: 1.2rem;
     color: #0c1d2f;
     text-align: center;
+    background-color: #03bd99;
 }
 
 h3 {
@@ -30,48 +31,22 @@ ul {
     border-color: #dde4ec #0c1d2f #0c1d2f #dde4ec;  
     padding: 0.5rem 0rem 0.5rem 0rem;
     text-align: center;
-    margin: 0rem 2rem 0rem 0rem; 
+    margin: 0.2rem 2rem 0rem 0rem; 
     list-style-type: none;
     height: 3rem;
 }
 
 .button_nav2:hover { background: #086CA2; }
 .button_nav2:active { background: #66bbbb; }
-
-@media (max-width: 932px) {
-    #popular_category {
-        margin: 1rem 0.5rem 0.5rem 1.5rem;
-    }
-}
-
-@media (max-width: 875px) {
-    #popular_category {
-        margin: 1rem 0.5rem 0.5rem 0.6rem;
-    }
-}
     
 @media (max-width: 840px) {
         .button_nav2 {
-        padding: 1rem 0rem 0rem 0rem;
-        margin: 0rem 0.5rem 0.5rem 0rem;
         height: 3.4rem;
     }
     
     #popular_category {
         margin: 1rem 0.5rem 0.5rem 0.5rem;
         padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 809px) {
-    #popular_category {
-        margin: 1rem 0.5rem 0.5rem 0.3rem;
-    }
-}
-
-@media (max-width: 806px) {
-    #popular_category {
-        margin: 1rem 0.5rem 0.5rem 1.4rem;
     }
 }
 
@@ -85,7 +60,6 @@ ul {
 
     #popular_category {
         padding-right: 1.5rem;
-        margin: 1rem 0.5rem 0.5rem 1.2rem;
     }
 }
 
@@ -99,17 +73,12 @@ ul {
     #another {
         grid-column: 1/3;
     }
-
-    #popular_category {
-        margin: 1rem 0.5rem 0.5rem 1rem;
-    }
 }
 
 
 @media (max-width: 530px) {
     #popular_category {    
         width: auto;
-        margin: 1rem 0.6rem 0.5rem 0.9rem;
     }
 
      #popular_category h3 {
@@ -124,5 +93,12 @@ ul {
         font-size: 1.1rem;
         margin: 0rem 0.5rem 0rem 0rem; 
         height: 3.5rem;
+    }
+}
+
+@media (max-width: 414px) {
+    #popular_category {
+        margin: 0.5rem;
+        width: 80%;
     }
 }

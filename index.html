@@ -21,6 +21,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Lucky You - бюро знахідок</title>
 </head>
+
 <body>
     <header>
         <h1>Lucky You</h1>
@@ -33,16 +34,16 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#found">Знайдено <span class="sr-only">(current)</span></a>
+                    <a href="#found" class="nav-link">Знайдено</a><span class="sr-only">(current)</span>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#lost">Загублено <span class="sr-only">(current)</span></a>
+                    <a href="#lost" class="nav-link">Загублено</a><span class="sr-only">(current)</span>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#contacts">Контакти <span class="sr-only">(current)</span></a>
+                    <a href="#contacts" class="nav-link">Контакти</a><span class="sr-only">(current)</span>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#registration">Реєстрація <span class="sr-only">(current)</span></a>
+                    <a href="#registration" class="nav-link">Мій кабінет</a><span class="sr-only">(current)</span>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -54,18 +55,20 @@
     <nav id="popular_category">
         <h3>Найпоширеніші категорії</h3>
         <ul>
-            <li class="button_nav2">Телефони</li>
-            <li class="button_nav2">Галантерея</li>
-            <li class="button_nav2">Гроші</li>
-            <li class="button_nav2">Аксесуари</li>
-            <li class="button_nav2">Документи</li>
-            <li class="button_nav2">Флешки</li>
-            <li class="button_nav2">Ключі</li>
-            <li class="button_nav2">Тварини</li>
-            <li id="another" class="button_nav2">Інше</li>
+            <li id="ajax_phones" class="button_nav2">Телефони</li>
+            <li id="ajax_bags" class="button_nav2">Галантерея</li>
+            <li id="ajax_money" class="button_nav2">Гроші</li>
+            <li id="ajax_rings" class="button_nav2">Золото</li>
+            <li id="ajax_documents" class="button_nav2">Документи</li>
+            <li id="ajax_flash" class="button_nav2">Флешки</li>
+            <li id="ajax_keys" class="button_nav2">Ключі</li>
+            <li id="ajax_animals" class="button_nav2">Тварини</li>
+            <li id="ajax_another" id="another" class="button_nav2">Інше</li>
         </ul>
+        <div id="new_popular"></div>
     </nav>
-    <aside id="reg_form"><h3 id="aside_registr"><span id="registration">Реєстрація</span></h3>
+    <aside id="reg_form">
+        <h3 id="aside_registr"><span id="registration">Увійти</span></h3>
         <form id="form_reg" method="POST" action="https://formspree.io/mikhail.romanishin@gmail.com">
             <label>
                 <input class="input_pass_name" type="email" name="registration client email" placeholder="Email" required>
@@ -79,8 +82,8 @@
                 <input type="checkbox" name="confirmation" required>* Я погоджуюсь із передачею та обробкою моїх даних адміністрацією сайту Lucky You. Я підтверджую своє повноліття та відповідальність за розміщення оголошення.
             </label>
             <br>
-            <input class="sub_res" type="submit" value="Реєстрація">
-            <input class="sub_res" type="reset" value="Скинути">
+            <input class="sub_res" type="submit" value="Увійти">
+            <input class="sub_res" type="button" value="Реєстрація" id="new_registr_window">
         </form>
     </aside>
     <aside id="last">
@@ -88,70 +91,70 @@
             <h2>Останні знайдені</h2>
             <article id="art_last_found_one">
                 <h4>Знайдено шапку</h4>
-                <img src="images/found/found_hat.jpg" alt="знайдено шапку" width="100">
+                <img src="images/found/found_hat.jpg" alt="знайдено шапку">
             </article>
             <article id="art_last_found_two">
-                <h4>Знайдено ключі</h4>
-                <img src="images/found/found_key.jpg" alt="знайдено ключі" width="100">
+                <h4>Знайдено ключ</h4>
+                <img src="images/found/found_key.jpg" alt="знайдено ключ">
             </article>
         </section>
         <section id="last_lost">
             <h2>Останні загублені</h2>
             <article id="art_last_lost_one">
                 <h4>Загублено документи</h4>
-                <img src="images/lost/lost_documents.jpg" alt="загублено документи" width="100">
+                <img src="images/lost/lost_documents.jpg" alt="загублено документи">
             </article>
             <article id="art_last_lost_two">
                 <h4>Загублено паспорт</h4>
-                <img src="images/lost/lost_passport.jpg" alt="загублено паспорт" width="100">
+                <img src="images/lost/lost_passport.jpg" alt="загублено паспорт">
             </article>
         </section>
     </aside>
     <main>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="3000">
             <div class="carousel-inner">
-            <div class="carousel-item active">
-                <section class="main_found">
-                    <h2>Знайдено</h2>
-                    <article class="button_main" data-toggle="modal" data-target="#modal_jacket">
-                        <h4>Знайдено куртку</h4>
-                        <img class="image_main" src="images/found/found_jacket.jpg" alt="знайдено куртку">
-                    </article>
-                    <article class="button_main" data-toggle="modal" data-target="#modal_key">
-                        <h4>Знайдено ключ</h4>
-                        <img class="image_main" src="images/found/found_key.jpg" alt="знайдено ключ">
-                    </article>
-                    <article class="button_main" data-toggle="modal" data-target="#modal_umbrella">
-                        <h4>Знайдено парасольку</h4>
-                        <img class="image_main" src="images/found/found_umbrella.jpg" alt="знайдено парасольку">
-                    </article>
-                    <article class="button_main" data-toggle="modal" data-target="#modal_watch">
-                        <h4>Знайдено годинник</h4>
-                        <img class="image_main" src="images/found/found_watch.jpg" alt="знайдено годинник">
-                    </article>
-                </section>
-            </div>
-            <div class="carousel-item">
-                <section class="main_found">
-                    <h2>Знайдено</h2>
-                    <article class="button_main" data-toggle="modal" data-target="#modal_hat">
-                        <h4>Знайдено шапку</h4>
-                        <img class="image_main" src="images/found/found_hat.jpg" alt="знайдено шапку">
-                    </article>
-                    <article class="button_main" data-toggle="modal" data-target="#modal_keys">
-                        <h4>Знайдено ключі</h4>
-                        <img class="image_main" src="images/found/found_keys.jpg" alt="знайдено ключі">
-                    </article>
-                    <article class="button_main" data-toggle="modal" data-target="#modal_ball">
-                        <h4>Знайдено м'яч</h4>
-                        <img class="image_main" src="images/found/found_ball.jpg" alt="знайдено м'яч">
-                    </article>
-                    <article class="button_main" data-toggle="modal" data-target="#modal_light">
-                        <h4>Знайдено ліхтарик</h4>
-                        <img class="image_main" src="images/found/found_light.jpg" alt="знайдено ліхтарик">
-                    </article>
-                </section>
-            </div>
+                <div class="carousel-item active">
+                    <section class="main_found">
+                        <h2 id="found">Знайдено</h2>
+                        <article class="button_main" data-toggle="modal" data-target="#modal_jacket">
+                            <h4>Знайдено куртку</h4>
+                            <img class="image_main" src="images/found/found_jacket.jpg" alt="знайдено куртку">
+                        </article>
+                        <article class="button_main" data-toggle="modal" data-target="#modal_key">
+                            <h4>Знайдено ключ</h4>
+                            <img class="image_main" src="images/found/found_key.jpg" alt="знайдено ключ">
+                        </article>
+                        <article class="button_main" data-toggle="modal" data-target="#modal_umbrella">
+                            <h4>Знайдено парасольку</h4>
+                            <img class="image_main" src="images/found/found_umbrella.jpg" alt="знайдено парасольку">
+                        </article>
+                        <article class="button_main" data-toggle="modal" data-target="#modal_watch">
+                            <h4>Знайдено годинник</h4>
+                            <img class="image_main" src="images/found/found_watch.jpg" alt="знайдено годинник">
+                        </article>
+                    </section>
+                </div>
+                <div class="carousel-item">
+                    <section class="main_found">
+                        <h2>Знайдено</h2>
+                        <article class="button_main" data-toggle="modal" data-target="#modal_hat">
+                            <h4>Знайдено шапку</h4>
+                            <img class="image_main" src="images/found/found_hat.jpg" alt="знайдено шапку">
+                        </article>
+                        <article class="button_main" data-toggle="modal" data-target="#modal_keys">
+                            <h4>Знайдено ключі</h4>
+                            <img class="image_main" src="images/found/found_keys.jpg" alt="знайдено ключі">
+                        </article>
+                        <article class="button_main" data-toggle="modal" data-target="#modal_ball">
+                            <h4>Знайдено м'яч</h4>
+                            <img class="image_main" src="images/found/found_ball.jpg" alt="знайдено м'яч">
+                        </article>
+                        <article class="button_main" data-toggle="modal" data-target="#modal_light">
+                            <h4>Знайдено ліхтарик</h4>
+                            <img class="image_main" src="images/found/found_light.jpg" alt="знайдено ліхтарик">
+                        </article>
+                    </section>
+                </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -165,48 +168,48 @@
         <br>
         <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel" data-interval="3000">
             <div class="carousel-inner">
-            <div class="carousel-item active">
-                <section class="main_lost">
-                    <h2>Загублено</h2>
-                    <article class="button_main" data-toggle="modal" data-target="#modal_bird">
-                        <h4>Загублено папугу</h4>
-                        <img class="image_main" src="images/lost/lost_bird.jpg" alt="загублено папугу">
-                    </article>
-                    <article class="button_main" data-toggle="modal" data-target="#modal_cat">
-                        <h4>Загублено кота</h4>
-                        <img class="image_main" src="images/lost/lost_cat.jpg" alt="загублено кота">
-                    </article>
-                    <article class="button_main" data-toggle="modal" data-target="#modal_jewelry">
-                        <h4>Загублено намисто</h4>
-                        <img class="image_main" src="images/lost/lost_jewelry.jpg" alt="загублено намисто">
-                    </article>
-                    <article class="button_main" data-toggle="modal" data-target="#modal_wallet_real">
-                        <h4>Загублено гаманець</h4>
-                        <img class="image_main" src="images/lost/lost_wallet_real.jpg" alt="загублено гаманець">
-                    </article>
-                </section>
-            </div>
-            <div class="carousel-item">
-                <section class="main_lost">
-                    <h2>Загублено</h2>
-                    <article class="button_main" data-toggle="modal" data-target="#modal_documents">
-                        <h4>Загублено документи</h4>
-                        <img class="image_main" src="images/lost/lost_documents.jpg" alt="загублено документи">
-                    </article>
-                    <article class="button_main" data-toggle="modal" data-target="#modal_passport">
-                        <h4>Загублено паспорт</h4>
-                        <img class="image_main" src="images/lost/lost_passport.jpg" alt="загублено паспорт">
-                    </article>
-                    <article class="button_main" data-toggle="modal" data-target="#modal_phone">
-                        <h4>Загублено телефон</h4>
-                        <img class="image_main" src="images/lost/lost_phone.jpg" alt="загублено телефон">
-                    </article>
-                    <article class="button_main" data-toggle="modal" data-target="#modal_wallet">
-                        <h4>Загублено гаманець</h4>
-                        <img class="image_main" src="images/lost/lost_wallet.jpg" alt="загублено гаманець">
-                    </article>
-                </section>
-            </div>
+                <div class="carousel-item active">
+                    <section class="main_lost">
+                        <h2 id="lost">Загублено</h2>
+                        <article class="button_main" data-toggle="modal" data-target="#modal_bird">
+                            <h4>Загублено папугу</h4>
+                            <img class="image_main" src="images/lost/lost_bird.jpg" alt="загублено папугу">
+                        </article>
+                        <article class="button_main" data-toggle="modal" data-target="#modal_cat">
+                            <h4>Загублено кота</h4>
+                            <img class="image_main" src="images/lost/lost_cat.jpg" alt="загублено кота">
+                        </article>
+                        <article class="button_main" data-toggle="modal" data-target="#modal_jewelry">
+                            <h4>Загублено намисто</h4>
+                            <img class="image_main" src="images/lost/lost_jewelry.jpg" alt="загублено намисто">
+                        </article>
+                        <article class="button_main" data-toggle="modal" data-target="#modal_wallet_real">
+                            <h4>Загублено гаманець</h4>
+                            <img class="image_main" src="images/lost/lost_wallet_real.jpg" alt="загублено гаманець">
+                        </article>
+                    </section>
+                </div>
+                <div class="carousel-item">
+                    <section class="main_lost">
+                        <h2>Загублено</h2>
+                        <article class="button_main" data-toggle="modal" data-target="#modal_documents">
+                            <h4>Загублено документи</h4>
+                            <img class="image_main" src="images/lost/lost_documents.jpg" alt="загублено документи">
+                        </article>
+                        <article class="button_main" data-toggle="modal" data-target="#modal_passport">
+                            <h4>Загублено паспорт</h4>
+                            <img class="image_main" src="images/lost/lost_passport.jpg" alt="загублено паспорт">
+                        </article>
+                        <article class="button_main" data-toggle="modal" data-target="#modal_phone">
+                            <h4>Загублено телефон</h4>
+                            <img class="image_main" src="images/lost/lost_phone.jpg" alt="загублено телефон">
+                        </article>
+                        <article class="button_main" data-toggle="modal" data-target="#modal_wallet">
+                            <h4>Загублено гаманець</h4>
+                            <img class="image_main" src="images/lost/lost_wallet.jpg" alt="загублено гаманець">
+                        </article>
+                    </section>
+                </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -218,7 +221,95 @@
             </a>
         </div>
     </main>
-    
+    <section id="map">
+        <h3>Карта знахідок і втрат</h3>
+        <div id="google_map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d43623.19924777782!2d24.033211930407518!3d49.83445154372495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1522909472667" width="1000" height="700" style="border:0"
+                allowfullscreen></iframe></div>
+    </section>
+    <section id="post_form">
+        <h3>Подати оголошення</h3>
+        <form method="POST" action="https://formspree.io/mikhail.romanishin@gmail.com">
+            <div class="form-group">
+                <label for="post_name_surname">Прізвище Ім'я:</label>
+                <input type="email" class="form-control" id="post_name_surname" placeholder="ПІБ" required>
+            </div>
+            <div class="form-group">
+                <label for="post_email">Email:</label>
+                <input type="email" class="form-control" id="post_email" placeholder="name@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="post_phone">Номер телефону:</label>
+                <input type="email" class="form-control" id="post_phone" placeholder="+380xxxxxxxxx" required>
+            </div>
+            <div class="form-group">
+                <label for="post_name">Назва:</label>
+                <input type="email" class="form-control" id="post_name" placeholder="Назва" required>
+            </div>
+            <div class="form-group">
+                <label for="post_city">Місто:</label>
+                <select class="form-control" id="post_city">
+                    <option>Вінниця</option>
+                    <option>Дніпро</option>
+                    <option>Запоріжжя</option>
+                    <option>Київ</option>
+                    <option>Львів</option>
+                    <option>Луцьк</option>
+                    <option>Одеса</option>
+                    <option>Полтава</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="post_topic">Рубрика:</label>
+                <select class="form-control" id="post_topic">
+                    <option>Загублено</option>
+                    <option>Знайдено</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect2">Вік:</label>
+                <select multiple class="form-control" id="exampleFormControlSelect2">
+                    <option>18-30</option>
+                    <option>30-45</option>
+                    <option>45-60</option>
+                    <option>60 і більше</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Опис:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Текст оголошення"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlFile1"></label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1" accept=".png, .jpg, .jpeg" multiple>
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-2">Надіслати</button>
+            </div>
+        </form>
+    </section>
+    <footer>
+        <section id="contacts">
+            <h4>Контакти</h4>
+            <form id="fb" method="get" action="https://www.facebook.com/" target="_blank" title="Facebook">
+                <button type="submit" name="facebook"><img src="images/footer/facebook_icon.png" alt="фейсбук"></button>
+            </form>
+            <form id="inst" method="get" action="https://www.instagram.com/" target="_blank" title="Instagram">
+                <button type="submit" name="instagram"><img src="images/footer/instagram_icon.png" alt="інстаграм"></button>
+            </form>
+        </section>
+        <br>
+        <section id="download">
+            <h4>Завантажте наш додаток</h4>
+            <br>
+            <form id="apps" method="get" action="https://www.appstore.com/" target="_blank" title="AppStore">
+                <button type="submit" name="appstore"><img src="images/footer/ios_download.png" alt="магазин додатків епл"></button>
+            </form>
+            <br>
+            <form id="playm" method="get" action="https://play.google.com/store" target="_blank" title="Play Market">
+                <button type="submit" name="play_market"><img src="images/footer/android_download.png" alt="магазин додатків андроід"></button>
+            </form>
+        </section>
+    </footer>
     <div class="modal fade" id="modal_jacket" tabindex="-1" role="dialog" aria-labelledby="myModalJacket" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -363,8 +454,7 @@
                     <h4 class="modal-title" id="myModalBird">Загублено папугу</h4>
                 </div>
                 <div class="modal-body">
-                    У Львові 28 вересня в районі залізничного вокзалу вилетів з квартири хвилястий голубий папуга.  
-                    Прохання повернути за винагороду. Тел 555 55 55.
+                    У Львові 28 вересня в районі залізничного вокзалу вилетів з квартири хвилястий голубий папуга. Прохання повернути за винагороду. Тел 555 55 55.
                     <img class="image_main" src="images/lost/lost_bird.jpg" alt="загублено папугу">
                 </div>
                 <div class="modal-footer">
@@ -412,7 +502,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalWalletReal">Загублено кота</h4>
+                    <h4 class="modal-title" id="myModalWalletReal">Загублено гаманець</h4>
                 </div>
                 <div class="modal-body">
                     У Львові 28 вересня в районі залізничного вокзалу загублено гаманець. Прохання повернути за винагороду. Тел 555 55 55.
@@ -492,98 +582,11 @@
             </div>
         </div>
     </div>
-
-    <section id="map">
-        <h3>Карта знахідок і втрат</h3>
-        <div id="google_map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d43623.19924777782!2d24.033211930407518!3d49.83445154372495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1522909472667" width="1050" height="700" style="border:0" allowfullscreen></iframe></div>
-    </section>
-    <section id="post_form">
-        <h3>Подати оголошення</h3>
-        <form method="POST" action="https://formspree.io/mikhail.romanishin@gmail.com">
-            <div class="form-group">
-                <label for="post_name_surname">Прізвище Ім'я:</label>
-                <input type="email" class="form-control" id="post_name_surname" placeholder="ПІБ" required>
-            </div>
-            <div class="form-group">
-                <label for="post_email">Email:</label>
-                <input type="email" class="form-control" id="post_email" placeholder="name@example.com" required>
-            </div>
-            <div class="form-group">
-                <label for="post_phone">Номер телефону:</label>
-                <input type="email" class="form-control" id="post_phone" placeholder="+380xxxxxxxxx" required>
-            </div>
-            <div class="form-group">
-                <label for="post_name">Назва:</label>
-                <input type="email" class="form-control" id="post_name" placeholder="Назва" required>
-            </div>
-            <div class="form-group">
-                <label for="post_city">Місто:</label>
-                <select class="form-control" id="post_city">
-                    <option>Вінниця</option>
-                    <option>Дніпро</option>
-                    <option>Запоріжжя</option>
-                    <option>Київ</option>
-                    <option>Львів</option>
-                    <option>Луцьк</option>
-                    <option>Одеса</option>
-                    <option>Полтава</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="post_topic">Рубрика:</label>
-                <select class="form-control" id="post_topic">
-                    <option>Загублено</option>
-                    <option>Знайдено</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlSelect2">Вік:</label>
-                <select multiple class="form-control" id="exampleFormControlSelect2">
-                    <option>18-30</option>
-                    <option>30-45</option>
-                    <option>45-60</option>
-                    <option>60 і більше</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Опис:</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Текст оголошення"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlFile1"></label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1" accept=".png, .jpg, .jpeg" multiple>
-            </div>
-            <div class="col-auto">
-                <button type="submit" class="btn btn-primary mb-2">Надіслати</button>
-            </div>
-        </form>
-    </section>
-    <footer>
-        <section id="contacts">
-            <h4>Контакти</h4>
-            <form id="fb" method="get" action="https://www.facebook.com/" target="_blank" title="Facebook">
-                <button type="submit" name="facebook"><img src="images/footer/facebook_icon.png" alt="фейсбук" width="40" height="40"></button>
-            </form>
-            <form id="inst" method="get" action="https://www.instagram.com/" target="_blank" title="Instagram">
-                <button type="submit" name="instagram"><img src="images/footer/instagram_icon.png" alt="інстаграм" width="40" height="40"></button>
-            </form>
-        </section>
-        <br>
-        <section id="download">
-            <h4>Завантажте наш додаток</h4>
-            <br>
-            <form id="apps" method="get" action="https://www.appstore.com/" target="_blank" title="AppStore">
-                <button type="submit" name="appstore"><img src="images/footer/ios_download.png" alt="магазин додатків епл" width="200" height="60"></button>
-            </form>
-            <br>
-            <form id="playm" method="get" action="https://play.google.com/store" target="_blank" title="Play Market">
-                <button type="submit" name="play_market"><img src="images/footer/android_download.png" alt="магазин додатків андроід" width="200" height="60"></button>
-            </form>
-        </section>
-    </footer>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+    <script src="js/popular_category.js"></script>
 </body>
+
 </html>

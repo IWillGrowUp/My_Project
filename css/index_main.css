@@ -127,36 +127,3 @@ main h4 {
         margin-top: 4rem;
     }
 }
-
-@media (max-width: 414px) {
-    .image_main {
-        width: 70%;
-    }
-
-    .button_main {
-        height: 90%;
-    }
-
-    main {
-        width: 80%;
-    }
-
-    .main_lost h4 {
-        font-size: 0.8rem;
-    }
-
-    .main_found h4 {
-        font-size: 0.8rem;
-    }
-
-    .carousel-control-prev {
-        width: 4%;
-        margin-top: 4.4rem;
-    }
-
-    .carousel-control-next {
-        width: 4%;
-        margin-top: 4.4rem;
-    }
-}
-

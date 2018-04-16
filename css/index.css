@@ -65,7 +65,7 @@ footer {
     body {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows:  11rem 6rem 19rem 32rem 51rem 85rem 23rem 65rem 30rem;
+        grid-template-rows:  repeat(9, 11%);    
     }
 
     header {
@@ -111,11 +111,5 @@ footer {
     footer {
         grid-column: 1/2;
         grid-row: 9/10;
-    }
-}
-
-@media (max-width: 414px) {
-     body {
-        grid-template-rows:  8rem 4rem 19rem 32rem 51rem 62rem 18rem 60rem 30rem;
     }
 }

@@ -11,6 +11,16 @@
     background-color: #03bd99;
 }
 
+#close_all {
+    display: none;
+    width: 100%;
+}
+
+
+.modal_popular img {
+    width: 25%;
+}
+
 h3 {
     grid-column: 1/2;
     grid-row: 1/2;
@@ -46,7 +56,6 @@ ul {
     
     #popular_category {
         margin: 1rem 0.5rem 0.5rem 0.5rem;
-        padding-right: 1.5rem;
     }
 }
 
@@ -54,14 +63,8 @@ ul {
     .button_nav2 {      
         padding: 1rem 0rem 0rem 0rem;
         font-size: 1.2rem;
-        margin: 0rem 0.5rem 0.5rem 0rem; 
         height: 4rem;
     }
-
-    #popular_category {
-        padding-right: 1.5rem;
-    }
-}
 
 @media (max-width: 617px) {
     ul {
@@ -82,7 +85,6 @@ ul {
     }
 
      #popular_category h3 {
-        padding-left: 2.5rem;
         margin: auto;
     }
 
@@ -91,14 +93,6 @@ ul {
         border-color: #dde4ec #0c1d2f #0c1d2f #dde4ec;  
         padding: 1rem 1rem 0rem 0.5rem;
         font-size: 1.1rem;
-        margin: 0rem 0.5rem 0rem 0rem; 
         height: 3.5rem;
-    }
-}
-
-@media (max-width: 414px) {
-    #popular_category {
-        margin: 0.5rem;
-        width: 80%;
     }
 }

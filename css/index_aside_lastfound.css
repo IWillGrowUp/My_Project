@@ -242,14 +242,3 @@
         grid-row: 2/3;
     }
 }
-
-
-@media (max-width: 414px) {
-    #last img {
-        height: 170px;
-    }
-
-    #last {
-        width: 80%;
-    }
-}

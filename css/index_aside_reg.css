@@ -53,10 +53,3 @@
         width: 20rem;
     }
 }
-
-@media (max-width: 414px) {
-    #reg_form {
-        width: 80%;
-        margin: 0.5rem
-    }
-}

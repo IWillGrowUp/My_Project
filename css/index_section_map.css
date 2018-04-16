@@ -8,30 +8,7 @@
     border-color: #0c1d2f #0c1d2f #0c1d2f #0c1d2f;
 }
 
-#google_map {
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
-    margin: 0.5rem;
-}
-
-.google_map iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
-}
-
-@media (max-width: 530px) {
-    #map {
-        width: 30.3rem;
-    }
-}
-
-@media (max-width: 414px) {
-    #map {
-        width: 22.5rem;
-    }
+#google_map iframe {
+    width: 95%;
+    margin-bottom: 1rem;
 }

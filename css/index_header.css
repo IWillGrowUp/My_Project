@@ -123,18 +123,3 @@ header em {
         font-size: 15px;
     }
 }
-
-@media (max-width: 414px) {
-    header {
-        height: 130px;
-        width: 375px;
-    }
-
-    h1 {
-        font-size: 28px;
-    }
-
-    header em {
-        font-size: 15px;
-    }
-}

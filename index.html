@@ -232,23 +232,23 @@
         <form method="POST" action="https://formspree.io/mikhail.romanishin@gmail.com">
             <div class="form-group">
                 <label for="post_name_surname">Прізвище Ім'я:</label>
-                <input type="email" class="form-control" id="post_name_surname" placeholder="ПІБ" required>
+                <input type="text" name="name_surname" class="form-control" id="post_name_surname" placeholder="ПІБ" required>
             </div>
             <div class="form-group">
                 <label for="post_email">Email:</label>
-                <input type="email" class="form-control" id="post_email" placeholder="name@example.com" required>
+                <input type="email" name="email" class="form-control" id="post_email" placeholder="name@example.com" required>
             </div>
             <div class="form-group">
                 <label for="post_phone">Номер телефону:</label>
-                <input type="email" class="form-control" id="post_phone" placeholder="+380xxxxxxxxx" required>
+                <input type="text" name="phone_number" class="form-control" id="post_phone" placeholder="+380xxxxxxxxx" required>
             </div>
             <div class="form-group">
                 <label for="post_name">Назва:</label>
-                <input type="email" class="form-control" id="post_name" placeholder="Назва" required>
+                <input type="text" name="name_of_thing" class="form-control" id="post_name" placeholder="Назва" required>
             </div>
             <div class="form-group">
                 <label for="post_city">Місто:</label>
-                <select class="form-control" id="post_city">
+                <select name="city" class="form-control" id="post_city">
                     <option>Вінниця</option>
                     <option>Дніпро</option>
                     <option>Запоріжжя</option>
@@ -261,14 +261,14 @@
             </div>
             <div class="form-group">
                 <label for="post_topic">Рубрика:</label>
-                <select class="form-control" id="post_topic">
+                <select name="topic" class="form-control" id="post_topic">
                     <option>Загублено</option>
                     <option>Знайдено</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect2">Вік:</label>
-                <select multiple class="form-control" id="exampleFormControlSelect2">
+                <select name="age" multiple class="form-control" id="exampleFormControlSelect2">
                     <option>18-30</option>
                     <option>30-45</option>
                     <option>45-60</option>
@@ -277,11 +277,11 @@
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Опис:</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Текст оголошення"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="description" rows="3" placeholder="Текст оголошення"></textarea>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlFile1"></label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1" accept=".png, .jpg, .jpeg" multiple>
+                <input type="file" class="form-control-file" name="downloaded_file" id="exampleFormControlFile1" accept=".png, .jpg, .jpeg" multiple>
             </div>
             <div class="col-auto">
                 <button type="submit" class="btn btn-primary mb-2">Надіслати</button>
